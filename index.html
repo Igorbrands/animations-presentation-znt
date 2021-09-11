@@ -1,40 +1,243 @@
-<!doctype html>
+<!DOCTYPE html>
 <html>
-	<head>
-		<meta charset="utf-8">
-		<meta name="viewport" content="width=device-width, initial-scale=1.0, maximum-scale=1.0, user-scalable=no">
+  <head>
+    <meta charset="utf-8" />
+    <meta
+      name="viewport"
+      content="width=device-width, initial-scale=1.0, maximum-scale=1.0, user-scalable=no"
+    />
 
-		<title>reveal.js</title>
+    <title>Animações no Front-end</title>
 
-		<link rel="stylesheet" href="dist/reset.css">
-		<link rel="stylesheet" href="dist/reveal.css">
-		<link rel="stylesheet" href="dist/theme/black.css">
+    <link rel="stylesheet" href="dist/reset.css" />
+    <link rel="stylesheet" href="dist/reveal.css" />
+    <link rel="stylesheet" href="dist/theme/moon.css" />
 
-		<!-- Theme used for syntax highlighted code -->
-		<link rel="stylesheet" href="plugin/highlight/monokai.css">
-	</head>
-	<body>
-		<div class="reveal">
-			<div class="slides">
-				<section>Slide 1</section>
-				<section>Slide 2</section>
-			</div>
-		</div>
+    <!-- Theme used for syntax highlighted code -->
+    <link rel="stylesheet" href="plugin/highlight/monokai.css" />
+  </head>
+  <body>
+    <div class="reveal">
+      <div class="slides">
+        <section><h2>Animações no Front-end</h2></section>
+        <section>
+          <h2>Animação + Motivação</h2>
+          <img
+            style="border-radius: 6px"
+            src="/examples/assets/gamificação-1.gif"
+          />
+        </section>
+        <section>
+          <div class="topics">
+            <h2>Tópicos:</h2>
+            <ol>
+              <li>Princípios</li>
+              <li>Para que servem?</li>
+              <li>Como eram feitas?</li>
+              <li>Como são feitas?</li>
+              <li>Performance / Boas Práticas</li>
+              <li>O que usar em 2021?</li>
+            </ol>
+          </div>
+        </section>
 
-		<script src="dist/reveal.js"></script>
-		<script src="plugin/notes/notes.js"></script>
-		<script src="plugin/markdown/markdown.js"></script>
-		<script src="plugin/highlight/highlight.js"></script>
-		<script>
-			// More info about initialization & config:
-			// - https://revealjs.com/initialization/
-			// - https://revealjs.com/config/
-			Reveal.initialize({
-				hash: true,
+        <section>
+          <h2>Princípios das Animações</h2>
+          <div>
+            <ul
+              style="
+                list-style-type: none;
+                display: flex;
+                flex-wrap: nowrap;
+                flex-direction: row;
+                align-content: stretch;
+                align-items: flex-end;
+              "
+            >
+              <li>
+                <h6>Staging</h6>
+                <img
+                  style="border-radius: 6px"
+                  src="/examples/assets/staging.gif"
+                  alt="Staging"
+                />
+              </li>
+              <li>
+                <h6>
+                  Straight Ahead & Pose to Pose (Direto em frente e pose a pose)
+                </h6>
+                <img
+                  style="border-radius: 6px"
+                  src="/examples/assets/straight.gif"
+                />
+              </li>
+            </ul>
+          </div>
+        </section>
+        <section>
+          <h2>Princípios das Animações</h2>
+          <div>
+            <ul
+              style="
+                list-style-type: none;
+                display: flex;
+                flex-wrap: nowrap;
+                flex-direction: row;
+                align-content: stretch;
+                align-items: flex-end;
+              "
+            >
+              <li>
+                <h6>Slow in & slow out (Acelerar e Desacelerar)</h6>
+                <img
+                  style="border-radius: 6px"
+                  src="/examples/assets/slowin.gif"
+                />
+              </li>
+              <li>
+                <h6>Timing</h6>
+                <img
+                  style="border-radius: 6px"
+                  src="/examples/assets/timing.gif"
+                />
+              </li>
+            </ul>
+          </div>
+        </section>
 
-				// Learn about plugins: https://revealjs.com/plugins/
-				plugins: [ RevealMarkdown, RevealHighlight, RevealNotes ]
-			});
-		</script>
-	</body>
+        <section>
+          <h2>Para que servem?</h2>
+          <ul>
+            <li>Respostas visuais</li>
+            <li>Boas Vindas</li>
+            <li>Loading</li>
+            <li>Interatividade</li>
+            <li>Scrolling</li>
+            <li>Mudança de Rotas/Modais</li>
+          </ul>
+        </section>
+
+        <section>
+          <div
+            style="display: flex; flex-direction: column; align-items: center"
+          >
+            <h2>Como eram feitas?</h2>
+            <img
+              style="max-width: 300px"
+              src="/examples/assets/adobe-flash-player.jpg"
+              alt="Flash"
+            />
+            <img
+              style="max-width: 600px"
+              src="/examples/assets/maxresdefault.jpg"
+              alt="FlashInterface"
+            />
+          </div>
+        </section>
+        <section>
+          <h2>Como são feitas?</h2>
+          <ul>
+            <li>CSS</li>
+            <ol>
+              <li>A diretiva @keyframes</li>
+              <li>As propriedades animation-*</li>
+              <li>Easings</li>
+            </ol>
+            <li>SVG</li>
+            <li>JS</li>
+            <li>JQuery</li>
+            <li>Libs JS</li>
+          </ul>
+        </section>
+        <section>
+          <h2>Performance + Boas Práticas</h2>
+          <ul>
+            <li>requestAnimationFrame() X setInterval/setTimeOut</li>
+            <li>will-change</li>
+            <li>60FPS = 1 quadro a cada 60s</li>
+            <li>
+              Render na GPU com transform: translateX, translateY e opacity
+            </li>
+          </ul>
+        </section>
+        <section>
+          <h2>O que usar em 2021?</h2>
+          <ul
+            style="
+              list-style-type: none;
+              display: flex;
+              flex-wrap: wrap;
+              justify-content: space-between;
+              align-items: center;
+            "
+          >
+            <li>
+              <img
+                style="
+                  max-width: 300px;
+                  border-radius: 6px;
+                  border: 4px solid tomato;
+                "
+                src="/examples/assets/gsap.jpg"
+              />
+            </li>
+            <li>
+              <img
+                style="
+                  max-width: 300px;
+                  border-radius: 6px;
+                  border: 4px solid tomato;
+                "
+                src="/examples/assets/framer.png"
+              />
+            </li>
+            <li>
+              <img
+                style="max-width: 300px; border-radius: 6px"
+                src="/examples/assets/anime-js.gif"
+              />
+            </li>
+            <li>
+              <img
+                style="max-width: 300px; border-radius: 6px"
+                src="/examples/assets/spring.gif"
+              />
+            </li>
+            <li>
+              <img
+                style="
+                  max-width: 300px;
+                  border-radius: 6px;
+                  border: 4px solid tomato;
+                "
+                src="/examples/assets/threejs.png"
+              />
+            </li>
+            <li>
+              <img
+                style="max-width: 300px; border-radius: 6px"
+                src="/examples/assets/popmotion.png"
+              />
+            </li>
+          </ul>
+        </section>
+        <section>
+          <h2>Fim</h2>
+          #gratidão ✌️
+        </section>
+      </div>
+    </div>
+
+    <script src="dist/reveal.js"></script>
+    <script src="plugin/notes/notes.js"></script>
+    <script src="plugin/markdown/markdown.js"></script>
+    <script src="plugin/highlight/highlight.js"></script>
+    <script>
+      Reveal.initialize({
+        hash: true,
+        autoPlayMedia: true,
+        plugins: [RevealMarkdown, RevealHighlight, RevealNotes],
+      });
+    </script>
+  </body>
 </html>
